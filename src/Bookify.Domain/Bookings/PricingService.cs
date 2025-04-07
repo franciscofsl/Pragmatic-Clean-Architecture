@@ -1,4 +1,5 @@
 ﻿using Bookify.Domain.Apartments;
+using Bookify.Domain.Shared;
 
 namespace Bookify.Domain.Bookings;
 
@@ -41,5 +42,3 @@ public class PricingService
         return new PricingDetails(priceForPeriod, apartment.CleaningFee, amenitiesUpCharge, totalPrice);
     }
 }
-
-public record PricingDetails(Money PriceForPeriod, Money CleaningFee, Money AmenitiesUpCharge, Money TotalPrice);
