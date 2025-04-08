@@ -33,13 +33,13 @@ public sealed class ReserveBookingCommandHandler : ICommandHandler<ReserveBookin
 
     public async Task<Result<Guid>> Handle(ReserveBookingCommand request, CancellationToken cancellationToken)
     {
-        var user = await _userRepository.GetUserByIdAsync(request.UserId, cancellationToken);
+        var user = await _userRepository.GetByIdAsync(request.UserId, cancellationToken);
         if (user is null)
         {
             return Result.Failure<Guid>(UserErrors.NotFound);
         }
 
-        var apartment = await _apartmentRepository.GetApartmentByIdAsync(request.ApartmentId, cancellationToken);
+        var apartment = await _apartmentRepository.GetByIdAsync(request.ApartmentId, cancellationToken);
         if (apartment is null)
         {
             return Result.Failure<Guid>(ApartmentErrors.NotFound);

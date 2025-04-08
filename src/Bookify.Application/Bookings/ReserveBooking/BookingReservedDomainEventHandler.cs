@@ -29,7 +29,7 @@ internal sealed class BookingReservedDomainEventHandler : INotificationHandler<B
             return;
         }
 
-        var user = await _userRepository.GetUserByIdAsync(booking.UserId, cancellationToken);
+        var user = await _userRepository.GetByIdAsync(booking.UserId, cancellationToken);
         if (user is null)
         {
             return;
