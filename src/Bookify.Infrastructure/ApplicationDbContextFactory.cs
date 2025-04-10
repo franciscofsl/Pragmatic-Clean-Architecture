@@ -10,7 +10,7 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
     {
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
 
-        optionsBuilder.UseNpgsql("Host=bookify-db;Port=5432;Database=bookify;Username=postgres;Password=postgres;");
+        optionsBuilder.UseSqlServer("Server=bookify-db;Database=bookify;User Id=sa;Password=bookify;TrustServerCertificate=True");
 
         return new ApplicationDbContext(optionsBuilder.Options, publisher: null!);
     }

@@ -1,5 +1,9 @@
 version: '3.4'
 
+networks:
+  raftel-network:
+    driver: bridge
+
 services:
   bookify.api:
     image: ${DOCKER_REGISTRY-}bookifyapi
@@ -9,15 +13,21 @@ services:
       dockerfile: src/Bookify.Api/Dockerfile
     depends_on:
       - bookify-db
-
-  bookify-db:
-    image: postgres:latest
-    container_name: Bookify.Db
     environment:
-      - POSTGRES_DB=bookify
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    volumes:
-      - ./.containers/database:/var/lib/postgresql/data
+      - ASPNETCORE_ENVIRONMENT=Development
     ports:
-      - 5432:5432
+      - 5000:5000
+      - 5001:5001
+    networks:
+      - raftel-network
+
+  bookify-db: 
+    image: "mcr.microsoft.com/mssql/server"
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "SqlServer_Docker2023"
+      ACCEPT_EULA: "Y"
+    networks:
+      - raftel-network
