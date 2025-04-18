@@ -111,6 +111,39 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Apartments",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/apartments?startDate=07-20-2023&endDate=07-31-2023",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"apartments"
+					],
+					"query": [
+						{
+							"key": "startDate",
+							"value": "07-20-2023"
+						},
+						{
+							"key": "endDate",
+							"value": "07-31-2023"
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
