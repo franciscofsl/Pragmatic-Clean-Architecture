@@ -10,6 +10,7 @@ using Bookify.Infrastructure.Data;
 using Bookify.Infrastructure.Email;
 using Bookify.Infrastructure.Repositories;
 using Dapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
@@ -24,6 +25,16 @@ public static class DependencyInjection
         services.AddTransient<IDateTimeProvider, DateTimeProvider>();
         services.AddTransient<IEmailService, EmailService>();
 
+        AddPersistence(services, configuration);
+
+        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer();
+        
+        return services;
+    }
+
+    private static void AddPersistence(IServiceCollection services, IConfiguration configuration)
+    {
         var connectionString = configuration.GetConnectionString("Database") ??
                                throw new ArgumentNullException();
 
@@ -39,7 +50,5 @@ public static class DependencyInjection
         
         services.AddSingleton<ISqlConnectionFactory>(_ => new SqlConnectionFactory(connectionString));
         SqlMapper.AddTypeHandler(new DateOnlyTypeHandler());
-        
-        return services;
     }
 }
