@@ -162,7 +162,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"email\": \"francisco@sierra.com\",\r\n  \"firstName\": \"Francisco\",\r\n  \"lastName\": \"Sierra\",\r\n  \"password\": \"12345\"\r\n}\r\n",
+					"raw": "{\r\n  \"email\": \"fran@mail.com\",\r\n  \"firstName\": \"Francisco\",\r\n  \"lastName\": \"Sierra\",\r\n  \"password\": \"12345\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -213,6 +213,37 @@
 						"api",
 						"users",
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJSc19DZHF5czZvdUFqelJCbWRUd3ZUWmIzb1hxTGFaTUoyU1NRLVVCNWlNIn0.eyJleHAiOjE3NDUyNjAzMDQsImlhdCI6MTc0NTI1NjcwNCwianRpIjoib25ydHJvOjMyMmZlYTk4LTdlNmMtNGZiZC1hZDQ0LTU5NzI5OTMyMTQxMSIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6MTgwODAvcmVhbG1zL2Jvb2tpZnkiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZTg0ODk1OTEtMmNjZC00M2Q0LTk5M2YtY2JjMWNkYjlhMTM3IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYm9va2lmeS1hdXRoLWNsaWVudCIsInNpZCI6IjY3ZjExMzVjLTc0NmEtNDU0Zi1iZTBhLWVlYmZlMTJmM2VlZSIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtYm9va2lmeSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsInZpZXctcHJvZmlsZSJdfX0sInNjb3BlIjoib3BlbmlkIGVtYWlsIHByb2ZpbGUiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmFtZSI6IkZyYW5jaXNjbyBTaWVycmEiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJmcmFuQG1haWwuY29tIiwiZ2l2ZW5fbmFtZSI6IkZyYW5jaXNjbyIsImZhbWlseV9uYW1lIjoiU2llcnJhIiwiZW1haWwiOiJmcmFuQG1haWwuY29tIn0.Mk_FjCwof4uvPP5H_DxHdimbXckuHeU4BIkACUGty1014rXqleTdr4xclPbN94l0rKWH32-_yBtDjZSnqHUgBmdEc6DuaudoZm6AGp2yLCVQduHCNxiYtqv9acZWm0bLM2rVaDvGmPuKCZVd_09knboEYmf1m9hbsLnZvBeBTKJhqdVPVdezKr1lhrmrhQcuEgyE5lHndZjdRlwl0eWUEJTsBWnymTEYs_cwjYHzsdsTu6YHqLgSHSJBmOFO9vim-nLhuYSJKwteXopnroQS_Ywd3KtcXLqNEQBPmi6-8iqwOz5yq7U3Y0XBCq6kslAYDbH07ew4C7jY5hvGuuQpHQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/users/me",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"users",
+						"me"
 					]
 				}
 			},

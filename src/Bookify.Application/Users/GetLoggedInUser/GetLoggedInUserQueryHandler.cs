@@ -28,12 +28,12 @@ internal sealed class GetLoggedInUserQueryHandler
 
         const string sql = """
             SELECT
-                id AS Id,
-                first_name AS FirstName,
-                last_name AS LastName,
-                email AS Email
+                Id AS Id,
+                FirstName AS FirstName,
+                LastName AS LastName,
+                Email AS Email
             FROM users
-            WHERE identity_id = @IdentityId
+            WHERE IdentityId = @IdentityId
             """;
 
         var user = await connection.QuerySingleAsync<UserResponse>(
