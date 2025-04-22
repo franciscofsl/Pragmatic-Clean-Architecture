@@ -1,0 +1,58 @@
+"EventId","EventType","Timestamp","Level","Message","Exception"
+"event-bdd5389d81c608dd0100000000000000","0x747d5f2c","2025-04-22T17:54:34.4853661Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Apartment.CleaningFee#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd92f6381c608dd0200000000000000","0x747d5f2c","2025-04-22T17:54:34.5113443Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Apartment.Price#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd940b681c608dd0300000000000000","0x747d5f2c","2025-04-22T17:54:34.5117878Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.AmenitiesUpCharge#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd9423f81c608dd0400000000000000","0x747d5f2c","2025-04-22T17:54:34.5118271Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.CleaningFee#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd9433e81c608dd0500000000000000","0x747d5f2c","2025-04-22T17:54:34.5118526Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.PriceForPeriod#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd9449481c608dd0600000000000000","0x747d5f2c","2025-04-22T17:54:34.5118868Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.TotalPrice#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-be453c5181c608dd0700000000000000","0xe9507561","2025-04-22T17:54:35.2194641Z","Information","Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1",""
+"event-be51000c81c608dd0800000000000000","0xfbc26d38","2025-04-22T17:54:35.2965644Z","Information","Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.",""
+"event-be545a3581c608dd0900000000000000","0xe9507561","2025-04-22T17:54:35.3185333Z","Information","Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result",""
+"event-be63139681c608dd0a00000000000000","0xe9507561","2025-04-22T17:54:35.4150294Z","Information","Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;",""
+"event-be65826181c608dd0b00000000000000","0xe9507561","2025-04-22T17:54:35.4309729Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1",""
+"event-be65f55881c608dd0c00000000000000","0xe9507561","2025-04-22T17:54:35.4339160Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');",""
+"event-be66baf781c608dd0d00000000000000","0xe9507561","2025-04-22T17:54:35.4389751Z","Information","Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];",""
+"event-be68af7381c608dd0e00000000000000","0x3fd30219","2025-04-22T17:54:35.4517875Z","Information","No migrations were applied. The database is already up to date.",""
+"event-be693b0b81c608dd0f00000000000000","0xe9507561","2025-04-22T17:54:35.4553611Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result",""
+"event-beefeead81c608dd1000000000000000","0x4691b6b8","2025-04-22T17:54:36.3381421Z","Information","User profile is available. Using 'C:\Users\Fran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.",""
+"event-befbfae881c608dd1100000000000000","0xa8255103","2025-04-22T17:54:36.4170984Z","Information","Application started. Press Ctrl+C to shut down.",""
+"event-befc315a81c608dd1200000000000000","0xc2f5e35a","2025-04-22T17:54:36.4184922Z","Information","Hosting environment: Development",""
+"event-befc358781c608dd1300000000000000","0x4e1e95a3","2025-04-22T17:54:36.4185991Z","Information","Content root path: C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api",""
+"event-befe6e1281c608dd1600000000000000","0xfed9c7dd","2025-04-22T17:54:36.4331538Z","Information","Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null",""
+"event-befe6e8c81c608dd1400000000000000","0xfed9c7dd","2025-04-22T17:54:36.4331660Z","Information","Request starting HTTP/1.1 GET https://localhost:5001/api/users/me - null null",""
+"event-befe756c81c608dd1500000000000000","0xfed9c7dd","2025-04-22T17:54:36.4333420Z","Information","Request starting HTTP/2 GET https://localhost:5001/service-worker.js - null null",""
+"event-bf0dc36881c608dd1700000000000000","0x37aa1435","2025-04-22T17:54:36.5336424Z","Information","HTTP GET /service-worker.js responded 404 in 34.7003 ms",""
+"event-bf1074f781c608dd1800000000000000","0xddff70e3","2025-04-22T17:54:36.5512951Z","Information","Request finished HTTP/2 GET https://localhost:5001/service-worker.js - 404 null null 119.5926ms",""
+"event-bf10ca6881c608dd1900000000000000","0xad6d2baf","2025-04-22T17:54:36.5534824Z","Information","Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/service-worker.js, Response status code: 404",""
+"event-bf1d964381c608dd1a00000000000000","0xddff70e3","2025-04-22T17:54:36.6373443Z","Information","Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.0754ms",""
+"event-bf27364e81c608dd1b00000000000000","0x10c1723e","2025-04-22T17:54:36.7004238Z","Information","Failed to validate the token.","Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21/04/2025 18:31:44', Current time (UTC): '22/04/2025 17:54:36'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)"
+"event-bf28376281c608dd1c00000000000000","0xa49d618b","2025-04-22T17:54:36.7070050Z","Information","Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21/04/2025 18:31:44', Current time (UTC): '22/04/2025 17:54:36'.",""
+"event-bf2a0a4381c608dd1d00000000000000","0x815d6961","2025-04-22T17:54:36.7189571Z","Information","Authorization failed. These requirements were not met:
+Bookify.Infrastructure.Authorization.PermissionRequirement",""
+"event-bf2b2ea281c608dd1e00000000000000","0xb5958e1d","2025-04-22T17:54:36.7264418Z","Information","AuthenticationScheme: Bearer was challenged.",""
+"event-bf2b6ba181c608dd1f00000000000000","0x37aa1435","2025-04-22T17:54:36.7280033Z","Information","HTTP GET /api/users/me responded 401 in 231.3457 ms",""
+"event-bf2c02be81c608dd2000000000000000","0xddff70e3","2025-04-22T17:54:36.7318718Z","Information","Request finished HTTP/1.1 GET https://localhost:5001/api/users/me - 401 null null 300.668ms",""

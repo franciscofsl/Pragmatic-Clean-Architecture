@@ -1,0 +1,192 @@
+"EventId","EventType","Timestamp","Level","Message","Exception"
+"event-bdd5389d81c608dd0100000000000000","0x747d5f2c","2025-04-22T17:54:34.4853661Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Apartment.CleaningFee#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd92f6381c608dd0200000000000000","0x747d5f2c","2025-04-22T17:54:34.5113443Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Apartment.Price#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd940b681c608dd0300000000000000","0x747d5f2c","2025-04-22T17:54:34.5117878Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.AmenitiesUpCharge#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd9423f81c608dd0400000000000000","0x747d5f2c","2025-04-22T17:54:34.5118271Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.CleaningFee#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd9433e81c608dd0500000000000000","0x747d5f2c","2025-04-22T17:54:34.5118526Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.PriceForPeriod#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-bdd9449481c608dd0600000000000000","0x747d5f2c","2025-04-22T17:54:34.5118868Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.TotalPrice#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-be453c5181c608dd0700000000000000","0xe9507561","2025-04-22T17:54:35.2194641Z","Information","Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1",""
+"event-be51000c81c608dd0800000000000000","0xfbc26d38","2025-04-22T17:54:35.2965644Z","Information","Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.",""
+"event-be545a3581c608dd0900000000000000","0xe9507561","2025-04-22T17:54:35.3185333Z","Information","Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result",""
+"event-be63139681c608dd0a00000000000000","0xe9507561","2025-04-22T17:54:35.4150294Z","Information","Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;",""
+"event-be65826181c608dd0b00000000000000","0xe9507561","2025-04-22T17:54:35.4309729Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1",""
+"event-be65f55881c608dd0c00000000000000","0xe9507561","2025-04-22T17:54:35.4339160Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');",""
+"event-be66baf781c608dd0d00000000000000","0xe9507561","2025-04-22T17:54:35.4389751Z","Information","Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];",""
+"event-be68af7381c608dd0e00000000000000","0x3fd30219","2025-04-22T17:54:35.4517875Z","Information","No migrations were applied. The database is already up to date.",""
+"event-be693b0b81c608dd0f00000000000000","0xe9507561","2025-04-22T17:54:35.4553611Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result",""
+"event-beefeead81c608dd1000000000000000","0x4691b6b8","2025-04-22T17:54:36.3381421Z","Information","User profile is available. Using 'C:\Users\Fran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.",""
+"event-befbfae881c608dd1100000000000000","0xa8255103","2025-04-22T17:54:36.4170984Z","Information","Application started. Press Ctrl+C to shut down.",""
+"event-befc315a81c608dd1200000000000000","0xc2f5e35a","2025-04-22T17:54:36.4184922Z","Information","Hosting environment: Development",""
+"event-befc358781c608dd1300000000000000","0x4e1e95a3","2025-04-22T17:54:36.4185991Z","Information","Content root path: C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api",""
+"event-befe6e1281c608dd1600000000000000","0xfed9c7dd","2025-04-22T17:54:36.4331538Z","Information","Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null",""
+"event-befe6e8c81c608dd1400000000000000","0xfed9c7dd","2025-04-22T17:54:36.4331660Z","Information","Request starting HTTP/1.1 GET https://localhost:5001/api/users/me - null null",""
+"event-befe756c81c608dd1500000000000000","0xfed9c7dd","2025-04-22T17:54:36.4333420Z","Information","Request starting HTTP/2 GET https://localhost:5001/service-worker.js - null null",""
+"event-bf0dc36881c608dd1700000000000000","0x37aa1435","2025-04-22T17:54:36.5336424Z","Information","HTTP GET /service-worker.js responded 404 in 34.7003 ms",""
+"event-bf1074f781c608dd1800000000000000","0xddff70e3","2025-04-22T17:54:36.5512951Z","Information","Request finished HTTP/2 GET https://localhost:5001/service-worker.js - 404 null null 119.5926ms",""
+"event-bf10ca6881c608dd1900000000000000","0xad6d2baf","2025-04-22T17:54:36.5534824Z","Information","Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/service-worker.js, Response status code: 404",""
+"event-bf1d964381c608dd1a00000000000000","0xddff70e3","2025-04-22T17:54:36.6373443Z","Information","Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 206.0754ms",""
+"event-bf27364e81c608dd1b00000000000000","0x10c1723e","2025-04-22T17:54:36.7004238Z","Information","Failed to validate the token.","Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21/04/2025 18:31:44', Current time (UTC): '22/04/2025 17:54:36'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)"
+"event-bf28376281c608dd1c00000000000000","0xa49d618b","2025-04-22T17:54:36.7070050Z","Information","Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21/04/2025 18:31:44', Current time (UTC): '22/04/2025 17:54:36'.",""
+"event-bf2a0a4381c608dd1d00000000000000","0x815d6961","2025-04-22T17:54:36.7189571Z","Information","Authorization failed. These requirements were not met:
+Bookify.Infrastructure.Authorization.PermissionRequirement",""
+"event-bf2b2ea281c608dd1e00000000000000","0xb5958e1d","2025-04-22T17:54:36.7264418Z","Information","AuthenticationScheme: Bearer was challenged.",""
+"event-bf2b6ba181c608dd1f00000000000000","0x37aa1435","2025-04-22T17:54:36.7280033Z","Information","HTTP GET /api/users/me responded 401 in 231.3457 ms",""
+"event-bf2c02be81c608dd2000000000000000","0xddff70e3","2025-04-22T17:54:36.7318718Z","Information","Request finished HTTP/1.1 GET https://localhost:5001/api/users/me - 401 null null 300.668ms",""
+"event-0838e66481c708dd2100000000000000","0x74b08604","2025-04-22T17:56:39.2900196Z","Information","Application is shutting down...",""
+"event-4449597681c808dd2200000000000000","0x747d5f2c","2025-04-22T18:05:29.5578486Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Apartment.CleaningFee#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-444cd75f81c808dd2300000000000000","0x747d5f2c","2025-04-22T18:05:29.5807327Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Apartment.Price#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-444cde0181c808dd2400000000000000","0x747d5f2c","2025-04-22T18:05:29.5809025Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.AmenitiesUpCharge#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-444cdee581c808dd2500000000000000","0x747d5f2c","2025-04-22T18:05:29.5809253Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.CleaningFee#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-444cdf9881c808dd2600000000000000","0x747d5f2c","2025-04-22T18:05:29.5809432Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.PriceForPeriod#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-444ce01281c808dd2700000000000000","0x747d5f2c","2025-04-22T18:05:29.5809554Z","Warning","No store type was specified for the decimal property 'Amount' on entity type 'Booking.TotalPrice#Money'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.",""
+"event-44b3a0db81c808dd2800000000000000","0xe9507561","2025-04-22T18:05:30.2543579Z","Information","Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1",""
+"event-44b6155981c808dd2900000000000000","0xfbc26d38","2025-04-22T18:05:30.2704473Z","Information","Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.",""
+"event-44b8f6ca81c808dd2a00000000000000","0xe9507561","2025-04-22T18:05:30.2893258Z","Information","Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result",""
+"event-44c533fc81c808dd2b00000000000000","0xe9507561","2025-04-22T18:05:30.3695356Z","Information","Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;",""
+"event-44c74fe481c808dd2c00000000000000","0xe9507561","2025-04-22T18:05:30.3833572Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1",""
+"event-44c79d8181c808dd2d00000000000000","0xe9507561","2025-04-22T18:05:30.3853441Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');",""
+"event-44c9469b81c808dd2e00000000000000","0xe9507561","2025-04-22T18:05:30.3962267Z","Information","Executed DbCommand (9ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];",""
+"event-44cadfa281c808dd2f00000000000000","0x3fd30219","2025-04-22T18:05:30.4066978Z","Information","No migrations were applied. The database is already up to date.",""
+"event-44cbfd2381c808dd3000000000000000","0xe9507561","2025-04-22T18:05:30.4140067Z","Information","Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result",""
+"event-4536f3cf81c808dd3100000000000000","0x4691b6b8","2025-04-22T18:05:31.1150031Z","Information","User profile is available. Using 'C:\Users\Fran\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.",""
+"event-45406f8681c808dd3200000000000000","0xa8255103","2025-04-22T18:05:31.1771526Z","Information","Application started. Press Ctrl+C to shut down.",""
+"event-45408c7781c808dd3300000000000000","0xc2f5e35a","2025-04-22T18:05:31.1778935Z","Information","Hosting environment: Development",""
+"event-454090a881c808dd3400000000000000","0x4e1e95a3","2025-04-22T18:05:31.1780008Z","Information","Content root path: C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api",""
+"event-4542c2b381c808dd3500000000000000","0xfed9c7dd","2025-04-22T18:05:31.1923891Z","Information","Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null",""
+"event-4542cfce81c808dd3600000000000000","0xfed9c7dd","2025-04-22T18:05:31.1927246Z","Information","Request starting HTTP/2 GET https://localhost:5001/service-worker.js - null null",""
+"event-454da1f881c808dd3700000000000000","0x37aa1435","2025-04-22T18:05:31.2636408Z","Information","HTTP GET /service-worker.js responded 404 in 30.7638 ms",""
+"event-4550807081c808dd3800000000000000","0xddff70e3","2025-04-22T18:05:31.2824432Z","Information","Request finished HTTP/2 GET https://localhost:5001/service-worker.js - 404 null null 91.5802ms",""
+"event-4550da0081c808dd3900000000000000","0xad6d2baf","2025-04-22T18:05:31.2847360Z","Information","Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:5001/service-worker.js, Response status code: 404",""
+"event-455ae54181c808dd3a00000000000000","0xddff70e3","2025-04-22T18:05:31.3505601Z","Information","Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 160.0168ms",""
+"event-47d6caa281c808dd3b00000000000000","0xfed9c7dd","2025-04-22T18:05:35.5179682Z","Information","Request starting HTTP/1.1 GET https://localhost:5001/api/users/me - null null",""
+"event-47ef4dc581c808dd3c00000000000000","0x10c1723e","2025-04-22T18:05:35.6786117Z","Information","Failed to validate the token.","Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21/04/2025 18:31:44', Current time (UTC): '22/04/2025 18:05:35'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)"
+"event-47f0871781c808dd3d00000000000000","0xa49d618b","2025-04-22T18:05:35.6866327Z","Information","Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '21/04/2025 18:31:44', Current time (UTC): '22/04/2025 18:05:35'.",""
+"event-47f2151481c808dd3e00000000000000","0x815d6961","2025-04-22T18:05:35.6968212Z","Information","Authorization failed. These requirements were not met:
+Bookify.Infrastructure.Authorization.PermissionRequirement",""
+"event-47f327f681c808dd3f00000000000000","0xb5958e1d","2025-04-22T18:05:35.7038582Z","Information","AuthenticationScheme: Bearer was challenged.",""
+"event-47f34d6d81c808dd4000000000000000","0x37aa1435","2025-04-22T18:05:35.7048173Z","Information","HTTP GET /api/users/me responded 401 in 184.1307 ms",""
+"event-47f3c69681c808dd4100000000000000","0xddff70e3","2025-04-22T18:05:35.7079190Z","Information","Request finished HTTP/1.1 GET https://localhost:5001/api/users/me - 401 null null 189.9329ms",""
+"event-4a0292cc81c808dd4200000000000000","0xfed9c7dd","2025-04-22T18:05:39.1603404Z","Information","Request starting HTTP/1.1 POST https://localhost:5001/api/users/login - application/json 58",""
+"event-4a03575681c808dd4300000000000000","0x53ff63bb","2025-04-22T18:05:39.1653718Z","Information","Executing endpoint 'Bookify.Api.Controllers.Users.UsersController.LogIn (Bookify.Api)'",""
+"event-4a075a5781c808dd4400000000000000","0xd969d070","2025-04-22T18:05:39.1916631Z","Information","Route matched with {action = ""LogIn"", controller = ""Users""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogIn(Bookify.Api.Controllers.Users.LogInUserRequest, System.Threading.CancellationToken) on controller Bookify.Api.Controllers.Users.UsersController (Bookify.Api).",""
+"event-4a1016ff81c808dd4500000000000000","0x1e597aed","2025-04-22T18:05:39.2489215Z","Information","Executing action method Bookify.Api.Controllers.Users.UsersController.LogIn (Bookify.Api) - Validation state: Valid",""
+"event-4a1169ea81c808dd4600000000000000","0xd4e29fe2","2025-04-22T18:05:39.2575978Z","Information","Executing request LogInUserCommand",""
+"event-4a13990581c808dd4700000000000000","0x9b0ede5b","2025-04-22T18:05:39.2719109Z","Information","Start processing HTTP request POST http://localhost:18080/realms/bookify/protocol/openid-connect/token",""
+"event-4a1434b081c808dd4800000000000000","0x9b55e6b6","2025-04-22T18:05:39.2758960Z","Information","Sending HTTP request POST http://localhost:18080/realms/bookify/protocol/openid-connect/token",""
+"event-4a1ea6d681c808dd4900000000000000","0x386a9aae","2025-04-22T18:05:39.3443542Z","Information","Received HTTP response headers after 64.5875ms - 200",""
+"event-4a1eda2881c808dd4a00000000000000","0x8009e2c7","2025-04-22T18:05:39.3456680Z","Information","End processing HTTP request after 74.9843ms - 200",""
+"event-4a1fe3fd81c808dd4b00000000000000","0x20e41188","2025-04-22T18:05:39.3524733Z","Information","Request LogInUserCommand processed successfully",""
+"event-4a2103ea81c808dd4c00000000000000","0x0248b328","2025-04-22T18:05:39.3598442Z","Information","Executed action method Bookify.Api.Controllers.Users.UsersController.LogIn (Bookify.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 104.8292ms.",""
+"event-4a22aa7e81c808dd4d00000000000000","0xa5774348","2025-04-22T18:05:39.3706622Z","Information","Executing OkObjectResult, writing value of type 'Bookify.Application.Users.LoginUser.AccessTokenResponse'.",""
+"event-4a245c5781c808dd4e00000000000000","0xd33c2b4a","2025-04-22T18:05:39.3817687Z","Information","Executed action Bookify.Api.Controllers.Users.UsersController.LogIn (Bookify.Api) in 183.2938ms",""
+"event-4a249a2781c808dd4f00000000000000","0xe6e435bf","2025-04-22T18:05:39.3833511Z","Information","Executed endpoint 'Bookify.Api.Controllers.Users.UsersController.LogIn (Bookify.Api)'",""
+"event-4a24ceb381c808dd5000000000000000","0x37aa1435","2025-04-22T18:05:39.3846963Z","Information","HTTP POST /api/users/login responded 200 in 222.4848 ms",""
+"event-4a24e58981c808dd5100000000000000","0xddff70e3","2025-04-22T18:05:39.3852809Z","Information","Request finished HTTP/1.1 POST https://localhost:5001/api/users/login - 200 null application/json; charset=utf-8 224.9048ms",""
+"event-4b28fae781c808dd5200000000000000","0xfed9c7dd","2025-04-22T18:05:41.0897639Z","Information","Request starting HTTP/1.1 POST https://localhost:5001/api/users/register - application/json 112",""
+"event-4b290e6981c808dd5300000000000000","0x53ff63bb","2025-04-22T18:05:41.0902633Z","Information","Executing endpoint 'Bookify.Api.Controllers.Users.UsersController.Register (Bookify.Api)'",""
+"event-4b29c72481c808dd5400000000000000","0xd969d070","2025-04-22T18:05:41.0949924Z","Information","Route matched with {action = ""Register"", controller = ""Users""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Register(Bookify.Api.Controllers.Users.RegisterUserRequest, System.Threading.CancellationToken) on controller Bookify.Api.Controllers.Users.UsersController (Bookify.Api).",""
+"event-4b2b0d8b81c808dd5500000000000000","0x1e597aed","2025-04-22T18:05:41.1033483Z","Information","Executing action method Bookify.Api.Controllers.Users.UsersController.Register (Bookify.Api) - Validation state: Valid",""
+"event-4b2b7a3d81c808dd5600000000000000","0xd4e29fe2","2025-04-22T18:05:41.1061309Z","Information","Executing request RegisterUserCommand",""
+"event-4b31e7a581c808dd5700000000000000","0x9b0ede5b","2025-04-22T18:05:41.1482533Z","Information","Start processing HTTP request POST http://localhost:18080/admin/realms/bookify/users",""
+"event-4b326bfe81c808dd5800000000000000","0x9b55e6b6","2025-04-22T18:05:41.1516414Z","Information","Sending HTTP request POST http://localhost:18080/realms/bookify/protocol/openid-connect/token",""
+"event-4b34a75b81c808dd5900000000000000","0x386a9aae","2025-04-22T18:05:41.1662683Z","Information","Received HTTP response headers after 14.5237ms - 200",""
+"event-4b34d1b981c808dd5a00000000000000","0x9b55e6b6","2025-04-22T18:05:41.1673529Z","Information","Sending HTTP request POST http://localhost:18080/admin/realms/bookify/users",""
+"event-4b38edc381c808dd5b00000000000000","0x386a9aae","2025-04-22T18:05:41.1942851Z","Information","Received HTTP response headers after 26.8432ms - 409",""
+"event-4b393b3381c808dd5c00000000000000","0x90ff6292","2025-04-22T18:05:41.1962675Z","Error","Request RegisterUserCommand processing failed","System.Net.Http.HttpRequestException: Response status code does not indicate success: 409 (Conflict).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at Bookify.Infrastructure.Authentication.AdminAuthorizationDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Infrastructure\Authentication\AdminAuthorizationDelegatingHandler.cs:line 30
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Bookify.Infrastructure.Authentication.AuthenticationService.RegisterAsync(User user, String password, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Infrastructure\Authentication\AuthenticationService.cs:line 29
+   at Bookify.Application.Users.RegisterUser.RegisterUserCommandHandler.Handle(RegisterUserCommand request, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Application\Users\RegisterUser\RegisterUserCommandHandler.cs:line 23
+   at Bookify.Application.Abstractions.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Application\Abstractions\Behaviours\ValidationBehavior.cs:line 26
+   at Bookify.Application.Abstractions.Behaviours.LoggingBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Application\Abstractions\Behaviours\LoggingBehaviour.cs:line 30
+   at Bookify.Api.Controllers.Users.UsersController.Register(RegisterUserRequest request, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api\Controllers\Users\UsersController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Bookify.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23"
+"event-4b39c53481c808dd5d00000000000000","0xd33c2b4a","2025-04-22T18:05:41.1998004Z","Information","Executed action Bookify.Api.Controllers.Users.UsersController.Register (Bookify.Api) in 104.704ms",""
+"event-4b39cc6c81c808dd5e00000000000000","0xe6e435bf","2025-04-22T18:05:41.1999852Z","Information","Executed endpoint 'Bookify.Api.Controllers.Users.UsersController.Register (Bookify.Api)'",""
+"event-4b39e29681c808dd5f00000000000000","0x03bb1267","2025-04-22T18:05:41.2005526Z","Error","Exception occurred: Response status code does not indicate success: 409 (Conflict).","System.Net.Http.HttpRequestException: Response status code does not indicate success: 409 (Conflict).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at Bookify.Infrastructure.Authentication.AdminAuthorizationDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Infrastructure\Authentication\AdminAuthorizationDelegatingHandler.cs:line 30
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Bookify.Infrastructure.Authentication.AuthenticationService.RegisterAsync(User user, String password, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Infrastructure\Authentication\AuthenticationService.cs:line 29
+   at Bookify.Application.Users.RegisterUser.RegisterUserCommandHandler.Handle(RegisterUserCommand request, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Application\Users\RegisterUser\RegisterUserCommandHandler.cs:line 23
+   at Bookify.Application.Abstractions.Behaviours.ValidationBehavior`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Application\Abstractions\Behaviours\ValidationBehavior.cs:line 26
+   at Bookify.Application.Abstractions.Behaviours.LoggingBehaviour`2.Handle(TRequest request, RequestHandlerDelegate`1 next, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Application\Abstractions\Behaviours\LoggingBehaviour.cs:line 30
+   at Bookify.Api.Controllers.Users.UsersController.Register(RegisterUserRequest request, CancellationToken cancellationToken) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api\Controllers\Users\UsersController.cs:line 38
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Bookify.Api.Middleware.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in C:\Users\Fran\Pragmatic-Clean-Architecture\src\Bookify.Api\Middleware\ExceptionHandlingMiddleware.cs:line 23"
+"event-4b3ca9d081c808dd6000000000000000","0x37aa1435","2025-04-22T18:05:41.2187600Z","Error","HTTP POST /api/users/register responded 500 in 128.6714 ms",""
+"event-4b3d19fd81c808dd6100000000000000","0xddff70e3","2025-04-22T18:05:41.2216317Z","Information","Request finished HTTP/1.1 POST https://localhost:5001/api/users/register - 500 null application/json; charset=utf-8 131.8678ms",""
