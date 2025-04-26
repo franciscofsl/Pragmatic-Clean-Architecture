@@ -195,7 +195,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"francisco@sierra.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"raw": "{\r\n    \"email\":\"fran@mail.com\",\r\n    \"password\":\"12345\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -246,6 +246,14 @@
 						"me"
 					]
 				}
+			},
+			"response": []
+		},
+		{
+			"name": "Health Checks",
+			"request": {
+				"method": "GET",
+				"header": []
 			},
 			"response": []
 		}
