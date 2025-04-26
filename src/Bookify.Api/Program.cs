@@ -21,9 +21,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
-builder.Services.AddHealthChecks().AddCheck<CustomSqlHealthCheck>("custom-sql");
-;
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -55,23 +52,3 @@ app.MapHealthChecks("health", new HealthCheckOptions
 });
 
 app.Run();
-
-public class CustomSqlHealthCheck(ISqlConnectionFactory sqlConnectionFactory) : IHealthCheck
-{
-    public async Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context,
-        CancellationToken cancellationToken = default)
-    {
-        try
-        {
-            using var connection = sqlConnectionFactory.CreateConnection();
-
-            await connection.ExecuteScalarAsync("SELECT 1;");
-
-            return HealthCheckResult.Healthy();
-        }
-        catch (Exception e)
-        {
-            return HealthCheckResult.Unhealthy(exception: e);
-        }
-    }
-}
