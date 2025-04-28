@@ -4,7 +4,7 @@ using Microsoft.Data.SqlClient;
 
 namespace Bookify.Infrastructure.Data;
 
-internal sealed class SqlConnectionFactory : ISqlConnectionFactory
+public sealed class SqlConnectionFactory : ISqlConnectionFactory
 {
     private readonly string _connectionString;
 
