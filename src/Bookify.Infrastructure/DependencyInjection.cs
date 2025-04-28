@@ -1,4 +1,5 @@
-﻿using Bookify.Application.Abstractions.Authentication;
+﻿using Asp.Versioning;
+using Bookify.Application.Abstractions.Authentication;
 using Bookify.Application.Abstractions.Caching;
 using Bookify.Application.Abstractions.Clock;
 using Bookify.Application.Abstractions.Data;
@@ -41,6 +42,7 @@ public static class DependencyInjection
         AddAuthorization(services);
         AddCaching(services, configuration);
         AddHealthChecks(services, configuration);
+        AddApiVersioning(services);
 
         return services;
     }
@@ -115,5 +117,22 @@ public static class DependencyInjection
             .AddSqlServer(configuration.GetConnectionString("Database")!)
             .AddRedis(configuration.GetConnectionString("Redis")!)
             .AddUrlGroup(new Uri(configuration["KeyCloak:BaseUrl"]!), HttpMethod.Get, "keycloak");
+    }
+
+    private static void AddApiVersioning(IServiceCollection services)
+    {
+        services
+            .AddApiVersioning(options =>
+            {
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new ApiVersion(1);
+                options.ApiVersionReader = new UrlSegmentApiVersionReader();
+            })
+            .AddMvc()
+            .AddApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'V";
+               options.SubstituteApiVersionInUrl = true; 
+            });
     }
 }
