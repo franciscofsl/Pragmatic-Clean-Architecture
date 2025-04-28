@@ -18,6 +18,7 @@
       <PackageReference Include="AspNetCore.HealthChecks.Uris" Version="9.0.0"/>
       <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0"/>
       <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0"/>
+        <PackageReference Include="Quartz.Extensions.Hosting" Version="3.14.0" />
     </ItemGroup>
 
     <ItemGroup>

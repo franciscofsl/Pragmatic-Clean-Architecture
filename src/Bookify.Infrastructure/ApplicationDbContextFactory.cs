@@ -1,3 +1,4 @@
+using Bookify.Infrastructure.Clock;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -12,6 +13,6 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
 
         optionsBuilder.UseSqlServer("Server=bookify-db;Database=bookify;User Id=sa;Password=bookify;TrustServerCertificate=True");
 
-        return new ApplicationDbContext(optionsBuilder.Options, publisher: null!);
+        return new ApplicationDbContext(optionsBuilder.Options, new DateTimeProvider());
     }
 }
