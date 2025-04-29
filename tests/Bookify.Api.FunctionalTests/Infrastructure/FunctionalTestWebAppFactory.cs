@@ -1,4 +1,5 @@
-﻿using Bookify.Api;
+﻿using System.Net.Http.Json;
+using Bookify.Api.FunctionalTests.Users;
 using Bookify.Application.Abstractions.Data;
 using Bookify.Infrastructure;
 using Bookify.Infrastructure.Authentication;
@@ -14,14 +15,14 @@ using Testcontainers.Keycloak;
 using Testcontainers.MsSql;
 using Testcontainers.Redis;
 
-namespace Bookify.Application.IntegrationTests.Infrastructure;
+namespace Bookify.Api.FunctionalTests.Infrastructure;
 
-public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsyncLifetime
+public class FunctionalTestWebAppFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
-    private readonly MsSqlContainer _dbContainer =new MsSqlBuilder()
+    private readonly MsSqlContainer _dbContainer = new MsSqlBuilder()
         .WithPassword("yourStrong(!)Password")
         .WithImage("mcr.microsoft.com/mssql/server:2022-latest")
-        // .WithCleanUp(true)
+        .WithCleanUp(true)
         .Build();
 
     private readonly RedisContainer _redisContainer = new RedisBuilder()
@@ -60,6 +61,12 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
                 o.AdminUrl = $"{keycloakAddress}admin/realms/bookify/";
                 o.TokenUrl = $"{keycloakAddress}realms/bookify/protocol/openid-connect/token";
             });
+
+            services.Configure<AuthenticationOptions>(o =>
+            {
+                o.Issuer = $"{keycloakAddress}realms/bookify/";
+                o.MetadataUrl = $"{keycloakAddress}realms/bookify/.well-known/openid-configuration";
+            });
         });
     }
 
@@ -68,6 +75,8 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         await _dbContainer.StartAsync();
         await _redisContainer.StartAsync();
         await _keycloakContainer.StartAsync();
+
+        await InitializeTestUserAsync();
     }
 
     public new async Task DisposeAsync()
@@ -75,5 +84,12 @@ public class IntegrationTestWebAppFactory : WebApplicationFactory<Program>, IAsy
         await _dbContainer.StopAsync();
         await _redisContainer.StopAsync();
         await _keycloakContainer.StopAsync();
+    }
+
+    private async Task InitializeTestUserAsync()
+    {
+        var httpClient = CreateClient();
+
+        await httpClient.PostAsJsonAsync("api/v1/users/register", UserData.RegisterTestUserRequest);
     }
 }
