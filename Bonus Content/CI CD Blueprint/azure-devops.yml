@@ -1,0 +1,28 @@
+trigger:
+  - main
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  dotnetVersion: "8.0.x"
+  solutionPath: "./Bookify.sln"
+
+steps:
+  - checkout: self
+
+  - task: UseDotNet@2
+    inputs:
+      version: $(dotnetVersion)
+
+  - script: dotnet restore $(solutionPath)
+    displayName: "Restore"
+
+  - script: dotnet build $(solutionPath) --configuration Release --no-restore
+    displayName: "Build"
+
+  - script: dotnet test $(solutionPath) --configuration Release --no-restore --no-build
+    displayName: "Test"
+
+  - script: dotnet publish $(solutionPath) --configuration Release --no-restore --no-build
+    displayName: "Publish"
